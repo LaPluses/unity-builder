@@ -64,6 +64,8 @@ class Docker {
             --volume "${actionFolder}/platforms/ubuntu/entrypoint.sh:/entrypoint.sh:z" \
             --volume "${actionFolder}/unity-config:/usr/share/unity3d/config/:z" \
             --add-host dl.google.com:120.253.255.97 \
+            --add-host github.global.ssl.fastly.net:199.232.69.194 \
+            --add-host github.com:140.82.112.3 \
             ${sshAgent ? `--volume ${sshAgent}:/ssh-agent` : ''} \
             ${sshAgent ? '--volume /home/runner/.ssh/known_hosts:/root/.ssh/known_hosts:ro' : ''} \
             ${entrypointBash ? `--entrypoint ${commandPrefix}` : ``} \
@@ -91,6 +93,8 @@ class Docker {
             --volume "${actionFolder}/platforms/windows":"c:/steps" \
             --volume "${actionFolder}/BlankProject":"c:/BlankProject" \
             --add-host dl.google.com:120.253.255.97 \
+            --add-host github.global.ssl.fastly.net:199.232.69.194 \
+            --add-host github.com:140.82.112.3 \
             ${image} \
             powershell c:/steps/entrypoint.ps1`;
   }
