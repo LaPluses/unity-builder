@@ -1,5 +1,5 @@
-name: 'Unity - Builder'
-author: Webber Takken <webber@takken.io>
+name: 'Unity - Builder with dl.google.com host'
+author: LaPluses <xipersup@gmail.com>
 description: 'Build Unity projects for different platforms.'
 inputs:
   targetPlatform:
